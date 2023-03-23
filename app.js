@@ -4,6 +4,9 @@ const app = express()
 // middlewares
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
+app.use(cors({
+    origin: '*'
+}))
 
 const tipoEquipo = require('./routes/tipoEquipo')
 const estado = require('./routes/estado')
